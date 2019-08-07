@@ -4,8 +4,15 @@ pipeline {
       label 'node1'
     }
   }
-  stages {
-    stage('Build result') {
+    stages {
+  
+      stage ('git checkout')
+      {
+      }
+      stage ('build'){
+      sh 'clean build'
+      }
+      stage('Build result') {
       steps {
         sh 'docker build -t dockersamples/result ./result'
       }
