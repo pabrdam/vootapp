@@ -3,7 +3,7 @@ pipeline {
     node {
           }
   }
-    stages   
+  stages  { 
       stage ('build'){
       sh 'clean build'
       }
