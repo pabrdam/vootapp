@@ -1,14 +1,10 @@
 pipeline {
   agent {
     node {
-      label 'node1'
-    }
+          }
   }
     stages {
   
-      stage ('git checkout')
-      {
-      }
       stage ('build'){
       sh 'clean build'
       }
